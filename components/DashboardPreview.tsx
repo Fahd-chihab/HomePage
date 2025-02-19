@@ -9,8 +9,8 @@ export default function DashboardPreview() {
       <div className="container mx-auto px-4">
         <div className="flex flex-col lg:flex-row items-center">
           <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
             viewport={{ once: true }}
             className="lg:w-1/2 mb-10 lg:mb-0 rtl"
@@ -22,7 +22,14 @@ export default function DashboardPreview() {
             <ul className="space-y-4">
               {["تتبع تقدم الدورة", "توصيات شخصية", "إدارة مقالات المدونة", "مكتبة المنتجات الرقمية"].map(
                 (feature, index) => (
-                  <li key={index} className="flex items-center">
+                  <motion.li 
+                    key={index} 
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: index * 0.2 }}
+                    viewport={{ once: true }}
+                    className="flex items-center"
+                  >
                     <svg
                       className="w-6 h-6 text-blue-600 ml-2"
                       fill="none"
@@ -33,14 +40,14 @@ export default function DashboardPreview() {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
                     </svg>
                     {feature}
-                  </li>
-                ),
+                  </motion.li>
+                )
               )}
             </ul>
           </motion.div>
           <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
             viewport={{ once: true }}
             className="lg:w-1/2"
@@ -58,4 +65,3 @@ export default function DashboardPreview() {
     </section>
   )
 }
-

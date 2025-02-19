@@ -66,31 +66,32 @@ export default function Hero() {
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="text-6xl font-bold mb-4 leading-tight"
+          className="text-6xl font-bold text-white mb-6 leading-tight"
         >
-          منصة التعلم الشاملة الخاصة بك
+          اكتشف عالماً من المعرفة <br />
+          <span className="text-blue-300">في مكان واحد</span>
         </motion.h1>
         <motion.p
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="text-2xl mb-8"
+          className="text-xl text-blue-100 max-w-2xl mx-auto mb-8"
         >
-          اكتشف الدورات، شارك المعرفة من خلال المدونات، واستكشف المنتجات الرقمية - كل ذلك في مكان واحد
+          منصة تعليمية متكاملة تجمع بين أفضل الدورات والمقالات والمنتجات
         </motion.p>
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
-          className="space-x-4 rtl:space-x-reverse"
+          className="flex flex-col sm:flex-row gap-4"
         >
-          <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white text-lg px-8 py-3">
+          <Button size="lg" className="w-full sm:w-auto bg-blue-600 hover:bg-blue-700 text-white text-lg px-8 py-3">
             استكشف الدورات
           </Button>
           <Button
             size="lg"
             variant="outline"
-            className="bg-transparent text-white border-white hover:bg-white hover:text-blue-900 text-lg px-8 py-3"
+            className="w-full sm:w-auto bg-transparent text-white border-white hover:bg-white hover:text-blue-900 text-lg px-8 py-3"
           >
             سجل مجانًا
           </Button>
