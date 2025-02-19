@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button"
 
 export default function InstructorCTA() {
   return (
-    <section className="py-20 bg-blue-900 text-white">
+    <section className="py-20 bg-white text-gray-900">
       <div className="container mx-auto px-4 text-center">
         <motion.h2
           initial={{ opacity: 0 }}
@@ -21,7 +21,7 @@ export default function InstructorCTA() {
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.5 }}
           viewport={{ once: true, margin: "-100px" }}
-          className="text-xl mb-8"
+          className="text-xl mb-8 text-gray-600"
         >
           شارك خبرتك، وأنشئ دورات جذابة، وصل إلى الطلاب في جميع أنحاء العالم.
         </motion.p>
@@ -31,11 +31,11 @@ export default function InstructorCTA() {
           transition={{ duration: 0.5 }}
           viewport={{ once: true, margin: "-100px" }}
         >
-          <Button size="lg" className="bg-white text-blue-900 hover:bg-blue-100">
+          <Button size="lg" className="bg-blue-600 text-white hover:bg-blue-700">
             ابدأ التدريس اليوم
           </Button>
         </motion.div>
       </div>
-    </section>  )
+    </section>
+  )
 }
-
