@@ -43,7 +43,7 @@ export default function Header() {
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex flex-1 justify-center mx-8 order-2">
-            {[...navigationItems].reverse().map((item) => (
+            {navigationItems.map((item) => (
               <Link
                 key={item.href}
                 href={item.href}
@@ -52,12 +52,12 @@ export default function Header() {
                 }`}
                 {...(item.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
               >
-                <span className="text-base font-medium">{item.text}</span>
                 <item.icon className="w-6 h-6" />
+                <span className="text-base font-medium">{item.text}</span>
+                
               </Link>
             ))}
           </div>
-
           {/* Logo */}
           <Link href="/" className="flex-shrink-0 order-1">
             <div className="bg-white p-2 shadow-md">
