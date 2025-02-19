@@ -5,21 +5,21 @@ import DashboardPreview from "@/components/DashboardPreview"
 import InstructorCTA from "@/components/InstructorCTA"
 import Header from "@/components/layout/Header"
 import Footer from "@/components/layout/Footer"
+import ScrollIndicator from "@/components/layout/ScrollIndicator"
 
 export default function Home() {
   return (
-    <div >
+    <div>
       <Header />
-    <main className="min-h-screen" >
-      <Hero />
-      <Features />
-      <HowItWorks />
-      <DashboardPreview />
-      <InstructorCTA />
-      
-    </main>
-    <Footer />
+      <ScrollIndicator />
+      <main className="min-h-screen">
+        <Hero />
+        <Features />
+        <HowItWorks />
+        <DashboardPreview />
+        <InstructorCTA />
+      </main>
+      <Footer />
     </div>
   )
 }
-
