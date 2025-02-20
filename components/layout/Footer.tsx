@@ -27,6 +27,32 @@ const Footer = () => {
               />
             </div>
 
+
+
+            {/* Contact Section */}
+            <div>
+              <h3 className="text-xl font-bold mb-3 text-blue-200 text-center lg:text-right">تواصل معنا</h3>
+              <div className="space-y-2 flex flex-col items-center md:items-start">
+                {[
+                  
+                  { text: "مجموعة الدروس المجانية", href: "https://chat.whatsapp.com/JszirU9FO3M98Mt9sUsTXi" },
+                  { text: "مجموعة مناقشة الورشات", href: "https://chat.whatsapp.com/Llim27PY6Fs0AR9o6unFjZ" },
+                  { text: "خدمة العملاء", href: "https://wa.me/message/RFLLHJOVW5Y7N1" },
+                ].map((item, index) => (
+                  <Link
+                    key={index}
+                    href={item.href}
+                    className="flex items-center gap-3 hover:bg-blue-800/30 transition-all p-2 rounded-xl group"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <FaWhatsapp className="shrink-0 text-green-400 group-hover:scale-110 transition-transform" size={24} />
+                    <span className="text-blue-100 group-hover:text-white transition-colors">{item.text}</span>
+                  </Link>
+                ))}
+              </div>
+            </div>
+
             {/* Quick Links */}
             <div>
               <h3 className="text-xl font-bold mb-3 text-blue-200 text-center lg:text-right">روابط سريعة</h3>
@@ -42,29 +68,6 @@ const Footer = () => {
                     className="block hover:bg-blue-800/30 transition-all p-2 rounded-xl text-blue-100 hover:text-white"
                   >
                     {link.text}
-                  </Link>
-                ))}
-              </div>
-            </div>
-
-            {/* Contact Section */}
-            <div>
-              <h3 className="text-xl font-bold mb-3 text-blue-200 text-center lg:text-right">تواصل معنا</h3>
-              <div className="space-y-2 flex flex-col items-center md:items-start">
-                {[
-                  { text: "خدمة العملاء", href: "https://wa.me/message/RFLLHJOVW5Y7N1" },
-                  { text: "مجموعة الدروس المجانية", href: "https://chat.whatsapp.com/JszirU9FO3M98Mt9sUsTXi" },
-                  { text: "مجموعة مناقشة الورشات", href: "https://chat.whatsapp.com/Llim27PY6Fs0AR9o6unFjZ" },
-                ].map((item, index) => (
-                  <Link
-                    key={index}
-                    href={item.href}
-                    className="flex items-center gap-3 hover:bg-blue-800/30 transition-all p-2 rounded-xl group"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <FaWhatsapp className="shrink-0 text-green-400 group-hover:scale-110 transition-transform" size={24} />
-                    <span className="text-blue-100 group-hover:text-white transition-colors">{item.text}</span>
                   </Link>
                 ))}
               </div>
