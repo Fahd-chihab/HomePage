@@ -6,6 +6,7 @@ import InstructorCTA from "@/components/InstructorCTA"
 import Header from "@/components/layout/Header"
 import Footer from "@/components/layout/Footer"
 import ScrollIndicator from "@/components/layout/ScrollIndicator"
+import CoreServices from "@/components/CoreServices"
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <ScrollIndicator />
       <main className="min-h-screen">
         <Hero />
+        <CoreServices />
         <Features />
         <HowItWorks />
         <DashboardPreview />
