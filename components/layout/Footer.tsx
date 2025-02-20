@@ -27,42 +27,6 @@ const Footer = () => {
               />
             </div>
 
-            {/* About Section */}
-            <div className="lg:col-span-1">
-              <h3 className="text-xl font-bold mb-3 text-blue-200 text-center lg:text-right">عن الأكاديمية</h3>
-              <p className="text-blue-100 mb-4 max-w-md text-center lg:text-right">منصة تعليمية رائدة تقدم دورات عالية الجودة وورش عمل تفاعلية لمساعدتك في تطوير مهاراتك وتحقيق أهدافك المهنية</p>
-              <div className="flex gap-4 justify-center md:justify-start">
-                <FaFacebook size={24} className="text-blue-300 hover:text-white cursor-pointer" />
-                <FaInstagram size={24} className="text-blue-300 hover:text-white cursor-pointer" />
-                <FaYoutube size={24} className="text-blue-300 hover:text-white cursor-pointer" />
-                <FaLinkedin size={24} className="text-blue-300 hover:text-white cursor-pointer" />
-                <FaTiktok size={24} className="text-blue-300 hover:text-white cursor-pointer" />
-                <FaTelegram size={24} className="text-blue-300 hover:text-white cursor-pointer" />
-
-              </div>            </div>
-            {/* Contact Section */}
-            <div>
-              <h3 className="text-xl font-bold mb-3 text-blue-200 text-center lg:text-right">تواصل معنا</h3>
-              <div className="space-y-2 flex flex-col items-center md:items-start">
-                {[
-                  { text: "خدمة العملاء", href: "https://wa.me/message/RFLLHJOVW5Y7N1" },
-                  { text: "مجموعة الدروس المجانية", href: "https://chat.whatsapp.com/JszirU9FO3M98Mt9sUsTXi" },
-                  { text: "مجموعة مناقشة الورشات", href: "https://chat.whatsapp.com/Llim27PY6Fs0AR9o6unFjZ" },
-                  
-                ].map((item, index) => (
-                  <Link
-                    key={index}
-                    href={item.href}
-                    className="flex items-center gap-3 hover:bg-blue-800/30 transition-all p-2 rounded-xl group"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <FaWhatsapp className="shrink-0 text-green-400 group-hover:scale-110 transition-transform" size={24} />
-                    <span className="text-blue-100 group-hover:text-white transition-colors">{item.text}</span>
-                  </Link>
-                ))}
-              </div>            </div>
-
             {/* Quick Links */}
             <div>
               <h3 className="text-xl font-bold mb-3 text-blue-200 text-center lg:text-right">روابط سريعة</h3>
@@ -82,16 +46,52 @@ const Footer = () => {
                 ))}
               </div>
             </div>
+
+            {/* Contact Section */}
+            <div>
+              <h3 className="text-xl font-bold mb-3 text-blue-200 text-center lg:text-right">تواصل معنا</h3>
+              <div className="space-y-2 flex flex-col items-center md:items-start">
+                {[
+                  { text: "خدمة العملاء", href: "https://wa.me/message/RFLLHJOVW5Y7N1" },
+                  { text: "مجموعة الدروس المجانية", href: "https://chat.whatsapp.com/JszirU9FO3M98Mt9sUsTXi" },
+                  { text: "مجموعة مناقشة الورشات", href: "https://chat.whatsapp.com/Llim27PY6Fs0AR9o6unFjZ" },
+                ].map((item, index) => (
+                  <Link
+                    key={index}
+                    href={item.href}
+                    className="flex items-center gap-3 hover:bg-blue-800/30 transition-all p-2 rounded-xl group"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <FaWhatsapp className="shrink-0 text-green-400 group-hover:scale-110 transition-transform" size={24} />
+                    <span className="text-blue-100 group-hover:text-white transition-colors">{item.text}</span>
+                  </Link>
+                ))}
+              </div>
+            </div>
+
+            {/* About Section */}
+            <div className="lg:col-span-1">
+              <h3 className="text-xl font-bold mb-3 text-blue-200 text-center lg:text-right">عن الأكاديمية</h3>
+              <p className="text-blue-100 mb-4 max-w-md text-center lg:text-right">منصة تعليمية رائدة تقدم دورات عالية الجودة وورش عمل تفاعلية لمساعدتك في تطوير مهاراتك وتحقيق أهدافك المهنية</p>
+              <div className="flex gap-4 justify-center md:justify-start">
+                <FaFacebook size={24} className="text-blue-300 hover:text-white cursor-pointer" />
+                <FaInstagram size={24} className="text-blue-300 hover:text-white cursor-pointer" />
+                <FaYoutube size={24} className="text-blue-300 hover:text-white cursor-pointer" />
+                <FaLinkedin size={24} className="text-blue-300 hover:text-white cursor-pointer" />
+                <FaTiktok size={24} className="text-blue-300 hover:text-white cursor-pointer" />
+                <FaTelegram size={24} className="text-blue-300 hover:text-white cursor-pointer" />
+              </div>
             </div>
           </div>
         </div>
-     
+      </div>
 
       {/* Bottom Bar */}
       <div className="bg-blue-950 py-4">
         <div className="container mx-auto px-6">
           <p className="text-blue-200 text-sm text-center">
-             أكاديمية الصحوة. جميع الحقوق محفوظة © {new Date().getFullYear()}
+            أكاديمية الصحوة. جميع الحقوق محفوظة © {new Date().getFullYear()}
           </p>
         </div>
       </div>
